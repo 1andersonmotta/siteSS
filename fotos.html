@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+    <link rel="shortcut icon" href="logoss.png">
+    <link rel="stylesheet" href="sitessstilo.css">
+    <script src="sitess.js"></script>
+    <style>
+        div#slide{
+            width: 520px;
+            height: 405px;
+            margin-left: 400px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 3px black;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .btnslide{
+            margin: 10px;
+            height: 30%;
+            background-color: rgba(0,0,0,0.4);
+            cursor: pointer;
+            outline: none;
+            border: none;
+        }
+        #load{
+            width: 100%;
+            height: 5px;
+            border: 1px solid rgba(255,255,255,0.4);
+            margin-top: 75%;
+        }
+        #barra{
+            width:0%;
+            height: 100%;
+            background-color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul type="disc">
+            <li><a href="sitess.html">HOME</a></li>
+            <li><a href="fotos.html">FOTOS</a></li>
+            <li><a href="multimidia.html">MULTIMÍDIA</a> </li>
+            <li><a href="fale-conosco.html">FALE CONOSCO</a> </li>
+        </ul>
+    </nav><br><br>
+    <div id="slide">
+        <button class="btnslide" onclick="trocarSlide(-1)"><</button>
+        <div id="load">
+            <div id="barra"></div>
+        </div>
+        <button class="btnslide" onclick="trocarSlide(1)">></button>
+
+    </div>
+    <figure class="sitefoto">
+        <img src="ssslide/s1.jpg" alt="" width="520" height="405" >
+        <img src="ssslide/s2.jpg" alt="" width="520" height="405" >
+        <img src="ssslide/s3.jpg" alt="" width="520" height="405" >
+        <img src="ssslide/s4.jpg" alt="" width="520" height="405" >
+        <img src="ssslide/s5.jpg" alt="" width="520" height="405" >
+        <img src="ssslide/s6.jpg" alt="" width="520" height="405">
+        <img src="ssslide/s7.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s8.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s9.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s10.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s11.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s12.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s13.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s14.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s15.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s16.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s17.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s18.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s19.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s20.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s21.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s22.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s23.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s24.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s25.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s26.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s27.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s28.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s29.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s30.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s31.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s32.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s33.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s34.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s35.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s36.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s37.jpg" alt=""width="520" height="405">
+        <img src="ssslide/s38.jpg" alt=""width="520" height="405">
+    </figure>
+    <br>
+        <p><input id="botao" type="button" value="Voltar página inicial" onclick="voltar()"></p>
+
+    <script>
+        var slide=[];
+        var divSlide;
+        var slideAtual;
+        var slideMax;
+        var tempoTroca;
+        var vtempo;
+        var vbarra;
+
+        function preCarregar(){
+            var s=1
+            for(var i=0; i<50 ;i++){
+                slide[i]= new Image();
+                slide[i].src="ssslide/s"+s+".jpg";
+                s++
+            }
+        }
+
+        function inicia(){
+            preCarregar();
+            divSlide=document.getElementById("slide");
+            vbarra=document.getElementById("barra");
+            slideAtual=0;
+            slideMax=slide.length-1;
+            carregar(slideAtual)
+            tempoTroca=0
+
+            anima()
+        }
+        function anima(){
+            tempoTroca++
+            if(tempoTroca>=200){
+                tempoTroca=0
+                trocarSlide(1)
+            }
+            window.requestAnimationFrame(anima);
+            vtempo=tempoTroca/2;
+            vbarra.style.width=vtempo+"%";
+
+        }
+
+        function carregar(img){
+            divSlide.style.backgroundImage="url('"+slide[img].src+"')";
+            divSlide.style.backgroundSize="540px";
+
+            
+        }
+
+        function trocarSlide(direcao){
+            slideAtual+=direcao;
+            tempoTroca=0
+            if(slideAtual>slideMax){
+                slideAtual=0
+            }else if(slideAtual<0){
+                slideAtual=slideMax;
+            }
+            carregar(slideAtual);
+        }
+
+        window.addEventListener("load",inicia);
+    </script>
+</body>
+</html>

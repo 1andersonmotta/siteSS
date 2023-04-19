@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSPRODUÇÕES</title>
+    <link rel="stylesheet" href="sitessstilo.css">
+    <link rel="shortcut icon" href="logoss.png">
+
+</head>
+<body >
+    <audio id="som1" controls >
+        <source src="audio.mp3" type="audio/mpeg" >
+    </audio>
+    <audio id="som2" controls >
+        <source src="Kanye West ft Big Sean   MERCY (ESH Remix).mp3" type="audio/mpeg" >
+    </audio>
+    <header>
+       <p id="p1">SS PRODUÇÕES</p> 
+       <p id="p2">DJ SOM E LUZ</p> 
+    </header>
+<input type="text" id="relogio">    
+<img id="logo2" src="logoss.png" alt="" usemap="#mapa" >
+<img id="logo3" src="logoss.png" alt="" >
+<img id="logo4" src="logoss.png" alt="" >
+
+<map name="mapa">
+        <area shape="rect" coords="3,3,246,247" href="http://127.0.0.1:5500/CursoJS/sssite/fale-conosco.html"    alt="">
+    </map>
+    <nav id="menu">
+        <h1>Menu Principal</h1>
+        <ul type="disc">
+            <li onmouseover="mudafoto('_imagens/home.png')" onmouseout="mudafoto('logoss.png')"><a href="sitess.html">HOME</a></li>
+            <li onmouseover="mudafoto('_imagens/fotos.png')" onmouseout="mudafoto('logoss.png')"><a href="fotos.html">FOTOS</a></li>
+            <li onmouseover="mudafoto('_imagens/multimidia.png')" onmouseout="mudafoto('logoss.png')"><a href="multimidia.html">MULTIMÍDIA</a> </li>
+            <li onmouseover="mudafoto('_imagens/contato.png')" onmouseout="mudafoto('logoss.png')"><a href="fale-conosco.html">FALE CONOSCO</a> </li>
+        </ul>
+    </nav>
+    <h1>Super Som Produções trabalhando há mais de dez anos em Sorocaba e Região<br> Animando todos os tipos de Eventos. <br>
+        Equipamentos de Qualidade, Serviço Excelente e Preço Justo.
+    </h1>
+    
+    <figure>
+        <img src="virtual1.jpg" alt="" >
+    </figure><br><br>
+    
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/1BZ5s6BcvKg?start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br><br>
+    <h1 id="orcamento">SOLICITE UM ORÇAMENTO SEM COMPROMISSO</h1>  
+    <h1>Sistema: 
+        <input type="radio" name="radsistema" id="dj"  checked>
+        <label for='dj'>Dj</label>
+        <input type="radio" name="radsistema" id="djsom" >
+        <label for="djsom">Dj e Som</label> 
+        <input type="radio" name="radsistema" id="djsomluz" >
+        <label for="djsomluz">Dj Som e Luz</label></h1> </h1>
+    <h1>Data <br><input type="date" name="data" id="data"  placeholder="12-03-2021..." required></h1>
+    <h1>Local <br><input type="string" name="local"id="local" placeholder="Endereço Completo..."required></h1> 
+    <h1>Horário <br><input type="number" name="horario"id="horario" placeholder="18...19..."required></h1>
+    <h1>Média de Convidados <br><input type="number" name="mediadeconvidados"id="mediadeconvidados" placeholder="50...100..." required></h1>
+   <h1><label for="animo">Qual o nível da Bagunça:</label><br> Triste<input type="range" name="animo" id="animo" min="0" max="10" step="2">Alegre</h1>
+    <h1> <input id="botao"  type="button" value="Orçamento" onclick="calcular()"></h1>
+    <br>
+    <p id="datainvalida"></p>
+    <p id="localinvalido"></p>
+    <p id="horarioinvalido"></p>
+    <p id="mediainvalida"></p>
+    <figure class="foto">
+        <img  src="fotomontagem.png" alt="" >
+        <figcaption>DIVERSOS PACOTES<br><img id="logo" src="logoss.png" alt=""></figcaption>
+    </figure>
+    <br><h1> Os melhores profissionais se encontram
+         aqui </h1> <br><br>
+    <figure class="foto">
+             <img src="djmontagem.png" alt="">
+             <figcaption>TOP <br> DEEJAY'S</figcaption>
+    </figure>
+    
+    <h1>Conheça um pouco mais sobre a profissão DJ</h1>
+    
+    <p><input id="botao" type="button" value="saiba mais" onclick="dj()"></p><br><br>
+    
+    <h1>Seja um DJ  virtual você também!</h1>
+    
+    <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/GQT9GDizx00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br><br><br>
+    <figure class="foto">
+       <img  src="virtual1.jpg" alt="">
+       <figcaption>acesse o link abaixo <br> e conheça o <br> Virtual Dj <br> &darr; </figcaption>
+    </figure> 
+        
+    <p> <a id="dj" href="https://www.virtualdj.com/" >Site Oficial Virtual Dj</a></p><br>
+        
+    <figure class="foto">
+        <img src="FROTA.png" alt="">
+        <figcaption>VEÍCULOS <br> ESPECIAIS <br><img id="logo" src="logoss.png" alt=""></figcaption>
+    </figure>
+    
+    <h1 > SS Produções dispõe de uma frota de veículos especiais que atendem a diversos 
+        tipos de Eventos, podendo se adequar a uma festa no Mar, no Ar ou em Terra. Sendo a ÚNICA empresa no segmento que possui 
+        um Ônibus espacial preparado para festas em outros planetas e 
+        um Trator para lugares de difícil acesso. <br> Tudo isso para melhor atendê-los.<h1>
+
+       
+    <p id="contato">Contato: 15-997897412 ou pelo <br> 
+        <a style="color: rgb(89, 245, 89);" href="https://l.facebook.com/l.php?u=https%3A%2F%2Fbit.ly%2F2Y4dWfl%3Ffbclid%3DIwAR0KKdgqy3sZ9GOxgXrb5qu2bZtqjBF3fWE0722im7deQm17Gi0bMYPm6ac&h=AT2d7AlriLX0AMpC-NevQnNeuEf_Iar5z2vNdZmx_HAtq8PC_7anra99IibQi9f8ivR_cpuMi2a_tCfVdRmAGwW257C-5xYlDg8FpOQFKuSf3yJ8BadN_TD3wjjJYH5dQg&__tn__=-UK-R&c[0]=AT2nqtm0tGL0aS0b8El7AbCVobTnD9QbsXMji0I1eI5dDnOuLJE5k5auL_yGuPrwkn5uFRr0st0MH4idDLYeevomV_M-zcgZHZiRFMDGbr5xEicjO0YpxY0UsmofqhN5T2_cHCreAaIMr2MlMZ-7u87FzUso3jWMwevnBNo_DkOjaOs2zC2AlSIV_A1Evyn4JaK0mukESLQPMr3qx4g">WhatsApp</a>
+        |<a style="color: rgb(74, 105, 243);" href="https://www.facebook.com/ssdjandersonmotta/ ">Facebook </a> 
+        |<a style="color: rgb(233, 71, 125);" href="https://www.instagram.com/djanderson_motta/">Instagram</a> <br>
+     email:   SSClientes@hotmail.com</p>
+    
+    
+    <footer >
+    <p id="footer">&copy;SSPRODUÇÕES</p> 
+    </footer>
+    
+    <script src="sitess.js"></script>
+
+</body>
+</html>
