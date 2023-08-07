@@ -1,4 +1,4 @@
-# Site SS Produções Dj, Som e Luz
+# 🎧 Site SS Produções Dj, Som e Luz
 
 ![Se necessário atualize a página para carregamento do GIF](sitess.gif)
 
@@ -18,6 +18,11 @@ Clone o Projeto no GitHub:
 https://github.com/1andersonmotta/siteSS.git 
 Abra o projeto com Visual Studio Code e o Arquivo sitess.html com Live Server
 
+## 🛠 Ferramentas
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+
 ## Contribuição
 
 Se você tem alguma Sugestão enviar para devandersonmotta@gmail.com com o assunto: "contribuição sitess" ou entre em contato pelo Linkedin.
@@ -26,14 +31,14 @@ Se você tem alguma Sugestão enviar para devandersonmotta@gmail.com com o assun
 
 MIT
 
-## Contato
+## ✉ Contato
 
 email: devandersonmotta@gmail.com
 
 linkedin: www.linkedin.com/in/anderson-motta-96b138235
 ---
 
-## Objetivo
+## 💡 Objetivo
 
 Praticar e adquirir conhecimento. 
 
